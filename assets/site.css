@@ -1,0 +1,127 @@
+/* Paper and ink, like the games. The title face (Caveat, SIL OFL 1.1) is served from this site: no third-party
+   requests on any page. */
+@font-face {
+  font-family: "Caveat";
+  src: url("Caveat.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  --paper: #f5f0e0;
+  --paper-deep: #ebe3cf;
+  --ink: #2b2722;
+  --ink-soft: #5f574d;
+  --pencil: rgba(43, 39, 34, 0.18);
+  --fairway: #48853f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1f1c18;
+    --paper-deep: #2a2620;
+    --ink: #efe8d6;
+    --ink-soft: #b9b09e;
+    --pencil: rgba(239, 232, 214, 0.2);
+    --fairway: #7cbf6e;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+}
+
+h1, h2 {
+  font-family: "Caveat", "Marker Felt", cursive;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 { font-size: 3.4rem; margin-bottom: 0.25rem; }
+
+h2 {
+  font-size: 2rem;
+  margin: 2.4rem 0 0.5rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1.5px solid var(--pencil);
+}
+
+p, ul { margin: 0 0 1rem; }
+
+ul { padding-left: 1.2rem; }
+
+li { margin-bottom: 0.4rem; }
+
+a { color: var(--fairway); text-underline-offset: 0.15em; }
+
+a:focus-visible { outline: 2px solid var(--fairway); outline-offset: 2px; border-radius: 2px; }
+
+.lede { color: var(--ink-soft); font-size: 1.1rem; }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.app img {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  border: 1px solid var(--pencil);
+  flex: none;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background: var(--paper-deep);
+  border: 1px solid var(--pencil);
+  border-radius: 14px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.card img { width: 64px; height: 64px; border-radius: 14px; flex: none; }
+
+.card strong { font-family: "Caveat", cursive; font-size: 1.9rem; line-height: 1; display: block; }
+
+.card span { color: var(--ink-soft); }
+
+.short {
+  background: var(--paper-deep);
+  border: 1px solid var(--pencil);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.short p:last-child { margin-bottom: 0; }
+
+nav { margin-bottom: 2rem; font-size: 0.95rem; }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1.5px solid var(--pencil);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
